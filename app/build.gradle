@@ -1,5 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
+    // Add the Google services Gradle plugin
+    // id 'com.google.gms.google-services'
 }
 
 android {
@@ -35,5 +38,15 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
+
     implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+
+    implementation libs.firebase.database
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:33.1.0')
+
+    // Declare the dependencies for the desired Firebase products without specifying versions
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-database'
 }
