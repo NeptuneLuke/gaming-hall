@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">GamingHall</string>
+
+    <string name="login">login</string>
+    <string name="registration">registration</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="or">or log in with</string>
+
+    <string name="sign_in">Log in</string>
+    <string name="already_user">Already have an account?</string>
+    <string name="new_user">New user?</string>
+    <string name="sign_up">Sign up</string>
+
+    <string name="error_username_not_found">Username does not exists</string>
+    <string name="error_email_not_found">Email not right</string>
+    <string name="error_password_not_found">Password not right</string>
+    <string name="error_email_invalid">Invalid email</string>
+    <string name="error_password_invalid">Invalid password</string>
 </resources>
