@@ -8,17 +8,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class LoginFragment extends Fragment {
+public class RegistrationFragment extends Fragment {
 
-    private static final String TAG = LoginFragment.class.getSimpleName();
+    private static final String TAG = RegistrationFragment.class.getSimpleName();
 
 
-    public LoginFragment() {
+    public RegistrationFragment() {
         // Required empty public constructor
     }
 
-    public static LoginFragment newInstance() {
-        return new LoginFragment();
+    public static RegistrationFragment newInstance() {
+        return new RegistrationFragment();
     }
 
     @Override
@@ -31,7 +31,7 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false);
+        return inflater.inflate(R.layout.fragment_registration, container, false);
     }
 
     @Override

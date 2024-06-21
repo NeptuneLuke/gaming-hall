@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.github.neptuneluke.gaminghall.HomeFragment"
+        android:label="fragment_home" >
+        <action
+            android:id="@+id/action_home_fragment_to_game_activity"
+            app:destination="@id/game_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.github.neptuneluke.gaminghall.SearchFragment"
+        android:label="fragment_search" >
+        <action
+            android:id="@+id/action_search_fragment_to_result_fragment"
+            app:destination="@id/result_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favorite_fragment"
+        android:name="com.github.neptuneluke.gaminghall.FavoriteFragment"
+        android:label="fragment_favorite" >
+        <action
+            android:id="@+id/action_favorite_fragment_to_game_activity"
+            app:destination="@id/game_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/review_fragment"
+        android:name="com.github.neptuneluke.gaminghall.ReviewFragment"
+        android:label="fragment_review" >
+        <action
+            android:id="@+id/action_review_fragment_to_game_activity"
+            app:destination="@id/game_activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.github.neptuneluke.gaminghall.ProfileFragment"
+        android:label="fragment_profile" >
+        <action
+            android:id="@+id/action_profile_fragment_to_access_main_activity"
+            app:destination="@id/access_main_activity" />
+    </fragment>
+
+    <include app:graph="@navigation/access_navigation" />
+
+    <activity
+        android:id="@+id/access_main_activity"
+        android:name="com.github.neptuneluke.gaminghall.AccessMainActivity"
+        android:label="activity_access_main"
+        tools:layout="@layout/activity_access_main" />
+
+    <fragment
+        android:id="@+id/result_fragment"
+        android:name="com.github.neptuneluke.gaminghall.ResultFragment"
+        android:label="fragment_profile" >
+        <action
+            android:id="@+id/action_result_fragment_to_game_activity"
+            app:destination="@id/game_activity" />
+    </fragment>
+
+    <activity
+        android:id="@+id/game_activity"
+        android:name="com.github.neptuneluke.gaminghall.GameActivity"
+        android:label="activity_game" >
+        <argument
+            android:name="Games"
+            app:argType="com.example.gameslist.model.Games" />
+    </activity>
+</navigation>

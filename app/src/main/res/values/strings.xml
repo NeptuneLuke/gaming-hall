@@ -19,4 +19,10 @@
     <string name="error_password_not_found">Password not right</string>
     <string name="error_email_invalid">Invalid email</string>
     <string name="error_password_invalid">Invalid password</string>
+
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="favorite">Favourites</string>
+    <string name="review">Reviews</string>
+    <string name="profile">Profile</string>
 </resources>
