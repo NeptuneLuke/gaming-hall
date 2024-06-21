@@ -14,7 +14,7 @@
 
     <fragment
         android:id="@+id/login_fragment"
-        android:name="com.github.neptuneluke.gaminghall.LoginFragment"
+        android:name="com.github.neptuneluke.gaminghall.access.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -27,7 +27,7 @@
 
     <fragment
         android:id="@+id/registration_fragment"
-        android:name="com.github.neptuneluke.gaminghall.RegistrationFragment"
+        android:name="com.github.neptuneluke.gaminghall.access.RegistrationFragment"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration" >
         <action

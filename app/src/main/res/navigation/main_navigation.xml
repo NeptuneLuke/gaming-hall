@@ -55,7 +55,7 @@
 
     <activity
         android:id="@+id/access_main_activity"
-        android:name="com.github.neptuneluke.gaminghall.AccessMainActivity"
+        android:name="com.github.neptuneluke.gaminghall.access.AccessMainActivity"
         android:label="activity_access_main"
         tools:layout="@layout/activity_access_main" />
 
