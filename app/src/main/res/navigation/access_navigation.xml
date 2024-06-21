@@ -8,7 +8,7 @@
 
     <activity
         android:id="@+id/main_activity"
-        android:name="com.example.gameslist.MainActivity"
+        android:name="com.github.neptuneluke.gaminghall.MainActivity"
         android:label="activity_main"
         tools:layout="@layout/activity_main" />
 
