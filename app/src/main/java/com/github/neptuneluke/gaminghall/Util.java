@@ -8,10 +8,9 @@ public class Util {
 
     // Login/Registration
     public static boolean isValidUsername(String username) {
-        if(username.isEmpty()
-                || username.contains(" ")
-                || username.length() < Constants.USERNAME_MIN_LENGTH
-                || username.length() > Constants.USERNAME_MAX_LENGTH) {
+        if(username.length() < Constants.USERNAME_MIN_LENGTH
+            || username.length() > Constants.USERNAME_MAX_LENGTH
+            || username.contains(" ")) {
             return false;
         }
         return true;
@@ -38,7 +37,7 @@ public class Util {
     // Logs
     public static void LOG_MESSAGE_D(String TAG, String message) {
 
-        message.toUpperCase().trim();
+        message.toUpperCase();
         String separator = "";
         for(int i=0; i < message.length(); ++i) {
             separator += "-";
@@ -49,7 +48,7 @@ public class Util {
 
     public static void LOG_MESSAGE_I(String TAG, String message) {
 
-        message.toUpperCase().trim();
+        message.toUpperCase();
         String separator = "";
         for(int i=0; i < message.length(); ++i) {
             separator += "-";
