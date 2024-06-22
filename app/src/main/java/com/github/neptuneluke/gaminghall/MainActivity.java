@@ -26,15 +26,17 @@ public class MainActivity extends AppCompatActivity {
         NavHostFragment nav_host_fragment = (NavHostFragment) getSupportFragmentManager().
                 findFragmentById(R.id.nav_host_fragment);
 
-        NavController nav_controller = nav_host_fragment.getNavController();
         BottomNavigationView bottom_nav = findViewById(R.id.bottom_navigation);
+        if(nav_host_fragment != null) {
+            NavController nav_controller = nav_host_fragment.getNavController();
+            NavigationUI.setupWithNavController(bottom_nav, nav_controller);
+        }
 
         AppBarConfiguration bar_config = new AppBarConfiguration.Builder(
                 R.id.fragment_home, R.id.fragment_search, R.id.fragment_favorite,
                 R.id.fragment_review, R.id.fragment_profile)
                 .build();
 
-        NavigationUI.setupWithNavController(bottom_nav, nav_controller);
     }
 
 }
