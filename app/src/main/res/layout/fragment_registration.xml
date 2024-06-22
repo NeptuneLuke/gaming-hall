@@ -24,8 +24,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/cabin"
         android:text="@string/registration"
+        android:fontFamily="@font/cabin"
         android:textAllCaps="true"
         android:textColor="@android:color/black"
         android:textSize="30sp"
@@ -102,10 +102,12 @@
         android:id="@+id/button_registration"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/cabin"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@android:color/holo_orange_dark"
         android:text="@string/registration"
+        android:fontFamily="@font/cabin"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_input_layout_password" />
 
@@ -121,17 +123,18 @@
             android:id="@+id/textview_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/cabin"
-            android:text="@string/already_user" />
+            android:text="@string/already_user"
+            android:fontFamily="@font/cabin" />
 
         <TextView
             android:id="@+id/textview_login_link"
             android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:fontFamily="@font/cabin"
+            android:backgroundTint="#FF9800"
             android:text="@string/sign_in"
-            android:textColor="@color/purple_200"
+            android:fontFamily="@font/cabin"
+            android:textColor="@android:color/holo_orange_dark"
             android:textStyle="bold|italic" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

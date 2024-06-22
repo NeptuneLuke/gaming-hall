@@ -26,4 +26,9 @@
     <string name="favorite">Favourites</string>
     <string name="review">Reviews</string>
     <string name="profile">Profile</string>
+
+    <string name="latest_release">Latest released</string>
+    <string name="latest_best">Recents most rated</string>
+    <string name="best_rating">Most rated</string>
+
 </resources>
