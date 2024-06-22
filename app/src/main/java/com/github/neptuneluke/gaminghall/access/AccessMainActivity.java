@@ -1,10 +1,12 @@
 package com.github.neptuneluke.gaminghall.access;
 
-import com.github.neptuneluke.gaminghall.R;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
+
+import com.github.neptuneluke.gaminghall.R;
 
 public class AccessMainActivity extends AppCompatActivity {
 
@@ -13,6 +15,8 @@ public class AccessMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_access_main);
 
         NavHostFragment nav_host_fragment =

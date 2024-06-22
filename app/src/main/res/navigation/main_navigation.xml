@@ -9,7 +9,7 @@
     <fragment
         android:id="@+id/home_fragment"
         android:name="com.github.neptuneluke.gaminghall.HomeFragment"
-        android:label="fragment_home" >
+        android:label="HomeFragment" >
         <action
             android:id="@+id/action_home_fragment_to_game_activity"
             app:destination="@id/game_activity" />
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/search_fragment"
         android:name="com.github.neptuneluke.gaminghall.SearchFragment"
-        android:label="fragment_search" >
+        android:label="SearchFragment" >
         <action
             android:id="@+id/action_search_fragment_to_result_fragment"
             app:destination="@id/result_fragment" />
@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/favorite_fragment"
         android:name="com.github.neptuneluke.gaminghall.FavoriteFragment"
-        android:label="fragment_favorite" >
+        android:label="FavoriteFragment" >
         <action
             android:id="@+id/action_favorite_fragment_to_game_activity"
             app:destination="@id/game_activity" />
@@ -36,7 +36,7 @@
     <fragment
         android:id="@+id/review_fragment"
         android:name="com.github.neptuneluke.gaminghall.ReviewFragment"
-        android:label="fragment_review" >
+        android:label="ReviewFragment" >
         <action
             android:id="@+id/action_review_fragment_to_game_activity"
             app:destination="@id/game_activity" />
@@ -45,7 +45,7 @@
     <fragment
         android:id="@+id/profile_fragment"
         android:name="com.github.neptuneluke.gaminghall.ProfileFragment"
-        android:label="fragment_profile" >
+        android:label="ProfileFragment" >
         <action
             android:id="@+id/action_profile_fragment_to_access_main_activity"
             app:destination="@id/access_main_activity" />
@@ -56,13 +56,13 @@
     <activity
         android:id="@+id/access_main_activity"
         android:name="com.github.neptuneluke.gaminghall.access.AccessMainActivity"
-        android:label="activity_access_main"
+        android:label="AccessMainActivity"
         tools:layout="@layout/activity_access_main" />
 
     <fragment
         android:id="@+id/result_fragment"
         android:name="com.github.neptuneluke.gaminghall.ResultFragment"
-        android:label="fragment_profile" >
+        android:label="ResultFragment" >
         <action
             android:id="@+id/action_result_fragment_to_game_activity"
             app:destination="@id/game_activity" />
@@ -71,9 +71,10 @@
     <activity
         android:id="@+id/game_activity"
         android:name="com.github.neptuneluke.gaminghall.GameActivity"
-        android:label="activity_game" >
+        android:label="GameActivity" >
+        <!--
         <argument
             android:name="Games"
-            app:argType="com.example.gameslist.model.Games" />
+            app:argType="com.github.neptuneluke.gaminghall.Games" /> -->
     </activity>
 </navigation>

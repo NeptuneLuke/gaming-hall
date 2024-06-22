@@ -51,7 +51,6 @@
             android:id="@+id/text_input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/cabin"
             android:hint="@string/email"
             android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -75,7 +74,6 @@
             android:id="@+id/text_input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/cabin"
             android:hint="@string/password"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -106,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button_login" />
 
     <ImageView
-        android:id="@+id/button_google_login"
+        android:id="@+id/image_google_login"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="20dp"

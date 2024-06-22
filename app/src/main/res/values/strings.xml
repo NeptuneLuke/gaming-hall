@@ -17,6 +17,7 @@
     <string name="error_email_already_taken">This email is already linked to an existing account</string>
     <string name="error_email_not_found">Email not right</string>
     <string name="error_password_not_found">Password not right</string>
+    <string name="error_username_invalid">Invalid username</string>
     <string name="error_email_invalid">Invalid email</string>
     <string name="error_password_invalid">Invalid password</string>
 
