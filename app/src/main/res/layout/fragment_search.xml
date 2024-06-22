@@ -28,7 +28,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_app"
-        android:contentDescription="App icon"
+        android:contentDescription="@string/app_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/ic_app" />
@@ -36,7 +36,7 @@
     <com.google.android.material.search.SearchBar
         android:id="@+id/search_bar"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="40dp"
         android:hint="@string/search"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="15dp"

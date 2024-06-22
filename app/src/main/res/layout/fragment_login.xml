@@ -113,7 +113,6 @@
         android:layout_height="48dp"
         android:layout_margin="20dp"
         android:src="@drawable/ic_google"
-        android:contentDescription="Google icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textview_or"

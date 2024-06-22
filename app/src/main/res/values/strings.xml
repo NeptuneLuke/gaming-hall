@@ -31,4 +31,6 @@
     <string name="latest_best">Recents most rated</string>
     <string name="best_rating">Most rated</string>
 
+    <string name="app_icon">App icon</string>
+
 </resources>
