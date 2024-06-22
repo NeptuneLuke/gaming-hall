@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         AppBarConfiguration bar_config = new AppBarConfiguration.Builder(
-                R.id.fragment_home, R.id.fragment_search, R.id.fragment_favorite,
-                R.id.fragment_review, R.id.fragment_profile)
+                R.id.home_fragment, R.id.search_fragment, R.id.favorite_fragment,
+                R.id.review_fragment, R.id.profile_fragment)
                 .build();
 
     }
