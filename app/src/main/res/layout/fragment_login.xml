@@ -12,6 +12,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="30dp"
+        android:src="@drawable/ic_app"
         android:contentDescription="App icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,11 +110,12 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_margin="20dp"
-        android:contentDescription="Google icon"
         android:src="@drawable/ic_google"
+        android:contentDescription="Google icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_or" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_or"
+        tools:srcCompat="@drawable/ic_google"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
