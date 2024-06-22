@@ -3,7 +3,6 @@ package com.github.neptuneluke.gaminghall.access;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import com.github.neptuneluke.gaminghall.Constants;
 import com.github.neptuneluke.gaminghall.MainActivity;
 import com.github.neptuneluke.gaminghall.R;
 import com.github.neptuneluke.gaminghall.Util;
