@@ -103,7 +103,7 @@
         android:id="@+id/button_registration"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:fontFamily="@font/cabin"
