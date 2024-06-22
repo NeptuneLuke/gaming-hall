@@ -1,6 +1,7 @@
 package com.github.neptuneluke.gaminghall;
 
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class GameActivity extends AppCompatActivity {
