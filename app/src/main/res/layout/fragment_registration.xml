@@ -108,6 +108,7 @@
         android:backgroundTint="@android:color/holo_orange_dark"
         android:fontFamily="@font/cabin"
         android:text="@string/registration"
+        android:textAllCaps="true"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_input_layout_password" />
