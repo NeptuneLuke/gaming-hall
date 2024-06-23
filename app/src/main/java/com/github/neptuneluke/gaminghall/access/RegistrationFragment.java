@@ -26,6 +26,7 @@ public class RegistrationFragment extends Fragment {
     private Button button_registration;
     private TextView textview_login_link;
 
+
     public RegistrationFragment() {
         // Required empty public constructor
     }

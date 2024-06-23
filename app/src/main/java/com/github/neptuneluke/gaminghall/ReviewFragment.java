@@ -8,10 +8,13 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class ReviewFragment extends Fragment {
 
     private static final String TAG = ReviewFragment.class.getSimpleName();
+
+    private RecyclerView recyclerview_review_games;
 
 
     public ReviewFragment() {
@@ -38,5 +41,7 @@ public class ReviewFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        recyclerview_review_games = view.findViewById(R.id.recyclerview_review_games);
     }
 }

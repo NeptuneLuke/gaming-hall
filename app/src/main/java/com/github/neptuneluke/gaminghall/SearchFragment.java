@@ -8,10 +8,17 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.appbar.AppBarLayout;
 
 public class SearchFragment extends Fragment {
 
     private static final String TAG = SearchFragment.class.getSimpleName();
+
+    private AppBarLayout search_bar;
+    private RecyclerView recyclerview_search_games;
+
 
     public SearchFragment() {
         // Required empty public constructor
@@ -37,5 +44,8 @@ public class SearchFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        search_bar = view.findViewById(R.id.search_bar_layout);
+        recyclerview_search_games = view.findViewById(R.id.recyclerview_search_games);
     }
 }
