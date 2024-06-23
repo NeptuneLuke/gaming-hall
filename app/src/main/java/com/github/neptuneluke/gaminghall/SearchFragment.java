@@ -13,6 +13,9 @@ public class SearchFragment extends Fragment {
 
     private static final String TAG = SearchFragment.class.getSimpleName();
 
+    // TODO:
+    // Aggiungi search bar funzionante in search_fragment
+    // (guarda gameslist)
 
     public SearchFragment() {
         // Required empty public constructor
