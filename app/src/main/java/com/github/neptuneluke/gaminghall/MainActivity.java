@@ -1,5 +1,6 @@
 package com.github.neptuneluke.gaminghall;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Set the application orientation to vertical (portrait) mode
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
+        // Hide the action bar (in this application only the title bar)
         if(getSupportActionBar() != null) {
             getSupportActionBar().hide();
         }
