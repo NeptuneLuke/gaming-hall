@@ -16,6 +16,12 @@ public class AccessMainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Set theme to the main one. If the theme is unchanged the splashscreen
+        // will remain the theme for the Login and Registration fragments
+        // (or AccessMainActivity in general)
+        setTheme(R.style.Theme_App_Main);
+
         super.onCreate(savedInstanceState);
 
         // Set the activity orientation to vertical (portrait) mode
