@@ -31,23 +31,28 @@ android {
 
 dependencies {
 
+    // UI elements dependencies
     implementation libs.appcompat
     implementation libs.material
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
+    // implementation 'com.google.android.flexbox:flexbox:3.0.0'
 
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
     androidTestImplementation libs.espresso.core
 
-    // Import the BoM for the Firebase platform
-    // implementation platform('com.google.firebase:firebase-bom:33.1.0')
-
+    // Firebase dependencies for remote database and authentication
     implementation libs.firebase.database
     implementation libs.firebase.auth
+
+    // Google Play Services for Google sign-in
     implementation libs.play.services.auth
 
-    implementation 'commons-validator:commons-validator:1.7' // latest version is 1.9.0
+    // To use EmailValidator
+    // latest version is 1.9.0
+    implementation 'commons-validator:commons-validator:1.7'
 
+    // HTTP client that translates HTTP API into a Java interface
     implementation libs.retrofit
 }
