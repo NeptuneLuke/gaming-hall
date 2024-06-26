@@ -10,13 +10,16 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.search.SearchBar;
+import com.google.android.material.search.SearchView;
 import com.google.android.material.appbar.AppBarLayout;
 
 public class SearchFragment extends Fragment {
 
     private static final String TAG = SearchFragment.class.getSimpleName();
 
-    private AppBarLayout search_bar;
+    private SearchBar search_bar;
+    private SearchView search_view;
     private RecyclerView recyclerview_search_games;
 
 
@@ -45,7 +48,8 @@ public class SearchFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        search_bar = view.findViewById(R.id.search_bar_layout);
+        search_bar = view.findViewById(R.id.search_bar);
+        search_view = view.findViewById(R.id.search_view);
         recyclerview_search_games = view.findViewById(R.id.recyclerview_search_games);
     }
 }

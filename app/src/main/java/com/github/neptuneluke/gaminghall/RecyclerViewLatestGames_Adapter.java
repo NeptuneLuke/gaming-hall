@@ -25,7 +25,7 @@ public class RecyclerViewLatestGames_Adapter extends RecyclerView.Adapter<Recycl
         this.context = context;
     }
 
-    public class TestViewHolder extends RecyclerView.ViewHolder {
+    static class TestViewHolder extends RecyclerView.ViewHolder {
         TextView textView;
         ImageView imageView;
 

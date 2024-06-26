@@ -37,7 +37,7 @@ public class Util {
     // Logs
     public static void LOG_MESSAGE_D(String TAG, String message) {
 
-        message.toUpperCase();
+        message = message.toUpperCase();
         String separator = "";
         for(int i=0; i < message.length(); ++i) {
             separator += "-";
@@ -48,7 +48,7 @@ public class Util {
 
     public static void LOG_MESSAGE_I(String TAG, String message) {
 
-        message.toUpperCase();
+        message = message.toUpperCase();
         String separator = "";
         for(int i=0; i < message.length(); ++i) {
             separator += "-";

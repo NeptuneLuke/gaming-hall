@@ -78,7 +78,7 @@ public class HomeFragment extends Fragment {
         adapter.addItem("e");
 
 
-        LOG_MESSAGE_D(TAG,"Inserted: " + String.valueOf(adapter.getItemCount()) + " items");
+        LOG_MESSAGE_D(TAG,"Inserted: " + adapter.getItemCount() + " items");
     }
 
 }
