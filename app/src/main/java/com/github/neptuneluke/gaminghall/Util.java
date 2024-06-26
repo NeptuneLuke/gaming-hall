@@ -2,7 +2,7 @@ package com.github.neptuneluke.gaminghall;
 
 import android.util.Log;
 
-import org.apache.commons.validator.routines.EmailValidator;
+import androidx.core.util.PatternsCompat;
 
 public class Util {
 
@@ -17,7 +17,7 @@ public class Util {
     }
 
     public static boolean isValidEmail(String email) {
-        if(!EmailValidator.getInstance().isValid((email))) {
+        if(!PatternsCompat.EMAIL_ADDRESS.matcher(email).matches()) {
             return false;
         }
         return true;

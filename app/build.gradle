@@ -52,10 +52,6 @@ dependencies {
     // Google Play Services for Google sign-in
     implementation libs.play.services.auth
 
-    // To use EmailValidator
-    // latest version is 1.9.0
-    implementation 'commons-validator:commons-validator:1.7'
-
     // HTTP client that translates HTTP API into a Java interface
     implementation libs.retrofit
 }
