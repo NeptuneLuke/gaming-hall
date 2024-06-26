@@ -16,8 +16,7 @@
         android:contentDescription="@string/app_icon"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ic_app" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textview_registration"
@@ -106,6 +105,7 @@
             android:layout_gravity="end"
             android:layout_marginEnd="15dp"
             android:backgroundTint="@android:color/holo_orange_dark"
+            app:cornerRadius="0dp"
             android:fontFamily="@font/cabin"
             android:text="@string/registration"
             android:textAllCaps="true"
