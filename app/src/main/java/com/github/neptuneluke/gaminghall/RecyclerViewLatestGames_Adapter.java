@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -59,7 +60,7 @@ public class RecyclerViewLatestGames_Adapter extends RecyclerView.Adapter<Recycl
 
     public void addItem(String newItem) {
         text_items.add(newItem);
-        Drawable d = this.context.getResources().getDrawable(R.drawable.ic_app);
+        Drawable d = ContextCompat.getDrawable(context, R.drawable.ic_app); //this.context.getResources().getDrawable(R.drawable.ic_app);
         image_items.add(d);
         notifyItemInserted(text_items.size() - 1);
     }
