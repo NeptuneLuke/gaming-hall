@@ -32,16 +32,26 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/ic_app" />
 
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/image_profile"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:contentDescription="User profile picture"
         android:src="@drawable/ic_person_black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_title"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
         tools:srcCompat="@drawable/ic_person_black" />
 
     <TextView
