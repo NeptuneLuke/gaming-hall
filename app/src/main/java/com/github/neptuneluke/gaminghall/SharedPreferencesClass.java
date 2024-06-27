@@ -1,7 +1,7 @@
 package com.github.neptuneluke.gaminghall;
 
 import static com.github.neptuneluke.gaminghall.Constants.APPLICATION_ID;
-import static com.github.neptuneluke.gaminghall.Constants.SHARED_PREFERENCES_FILE_NAME;
+import static com.github.neptuneluke.gaminghall.Constants.SHARED_PREFERENCES_FILE;
 
 import android.app.Application;
 import android.content.Context;
@@ -12,7 +12,7 @@ import java.util.Set;
 public class SharedPreferencesClass {
 
     private final Context context;
-    private final String FILE_NAME = APPLICATION_ID + "." + SHARED_PREFERENCES_FILE_NAME;
+    private final String FILE_NAME = APPLICATION_ID + "." + SHARED_PREFERENCES_FILE;
 
     public SharedPreferencesClass(Application application) {
         this.context = application.getApplicationContext();

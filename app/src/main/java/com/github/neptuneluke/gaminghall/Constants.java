@@ -15,5 +15,5 @@ public class Constants {
     public static final String FIREBASE_REALTIME_DATABASE = "https://gaminghall-e3416-default-rtdb.firebaseio.com";
 
     // Shared Preferences
-    public static final String SHARED_PREFERENCES_FILE_NAME = "shared_pref";
+    public static final String SHARED_PREFERENCES_FILE = "shared_pref";
 }
