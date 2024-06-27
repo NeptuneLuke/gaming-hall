@@ -18,9 +18,11 @@ public class ProfileFragment extends Fragment {
     private static final String TAG = ProfileFragment.class.getSimpleName();
 
     private ImageView image_profile;
-    private TextView textview_username;
+    private TextView textview_username, textview_email, textview_password, textview_number_favorite, textview_number_review;
     private Spinner spinner_language;
     private Button button_language, button_logout, button_delete_account;
+
+    public static final String[] languages = {"Select language", "English", "Italiano"};
 
 
     public ProfileFragment() {
@@ -50,6 +52,10 @@ public class ProfileFragment extends Fragment {
 
         image_profile = view.findViewById(R.id.image_profile);
         textview_username = view.findViewById(R.id.textview_username);
+        textview_email = view.findViewById(R.id.textview_email);
+        textview_password = view.findViewById(R.id.textview_password);
+        textview_number_favorite = view.findViewById(R.id.textview_number_favorite);
+        textview_number_review = view.findViewById(R.id.textview_number_review);
         spinner_language = view.findViewById(R.id.spinner_language);
         button_language = view.findViewById(R.id.button_language);
         button_logout = view.findViewById(R.id.button_logout);

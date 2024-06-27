@@ -95,6 +95,33 @@
         app:layout_constraintStart_toEndOf="@+id/textview_title_number_favorite"
         app:layout_constraintTop_toBottomOf="@+id/textview_username" />
 
+    <TextView
+        android:id="@+id/textview_title_number_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cabin"
+        android:text="@string/number_review"
+        android:textColor="#646464"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title_number_favorite" />
+
+    <TextView
+        android:id="@+id/textview_number_review"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cabin"
+        android:text="@string/placeholder"
+        android:textColor="#646464"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textview_title_number_review"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title_number_favorite" />
+
     <View
         android:id="@+id/custom_border_1"
         android:layout_width="380dp"
@@ -103,7 +130,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/custom_border"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_title_number_favorite"/>
+        app:layout_constraintTop_toBottomOf="@+id/textview_title_number_review"/>
 
     <TextView
         android:id="@+id/textview_title_email"
