@@ -59,4 +59,8 @@ dependencies {
     // Room is an Android DBMS
     implementation libs.room.runtime
     annotationProcessor libs.room.compiler
+
+    // Google Gson is a library that can be used to
+    // convert Java Objects into JSON and JSON into Java Objects
+    implementation libs.gson
 }
