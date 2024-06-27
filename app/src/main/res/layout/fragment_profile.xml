@@ -68,14 +68,125 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/image_profile" />
 
+    <TextView
+        android:id="@+id/textview_title_number_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/cabin"
+        android:text="@string/number_favorite"
+        android:textColor="#646464"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_username" />
+
+    <TextView
+        android:id="@+id/textview_number_favorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/cabin"
+        android:text="@string/placeholder"
+        android:textColor="#646464"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textview_title_number_favorite"
+        app:layout_constraintTop_toBottomOf="@+id/textview_username" />
+
+    <View
+        android:id="@+id/custom_border_1"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_title_number_favorite"/>
+
+    <TextView
+        android:id="@+id/textview_title_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cabin"
+        android:text="@string/email"
+        android:textColor="#646464"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/custom_border_1"
+        app:layout_constraintTop_toTopOf="@+id/custom_border_1" />
+
+    <TextView
+        android:id="@+id/textview_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/placeholder"
+        android:fontFamily="@font/cabin"
+        android:textColor="#646464"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textview_title_email"
+        app:layout_constraintTop_toTopOf="@+id/custom_border_1" />
+
+    <View
+        android:id="@+id/custom_border_2"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/custom_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_border_1"/>
+
+    <TextView
+        android:id="@+id/textview_title_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cabin"
+        android:text="@string/password"
+        android:textColor="#646464"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/custom_border_2"
+        app:layout_constraintTop_toTopOf="@+id/custom_border_2" />
+
+    <TextView
+        android:id="@+id/textview_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/placeholder"
+        android:fontFamily="@font/cabin"
+        android:textColor="#646464"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textview_title_password"
+        app:layout_constraintTop_toTopOf="@+id/custom_border_2" />
+
+    <ImageView
+        android:id="@+id/image_visibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/ic_visibility_on_gray"
+        app:layout_constraintEnd_toEndOf="@+id/custom_border_2"
+        app:layout_constraintTop_toTopOf="@+id/custom_border_2" />
+
     <Spinner
         android:id="@+id/spinner_language"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_username" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/custom_border_2" />
 
     <Button
         android:id="@+id/button_language"
@@ -89,13 +200,13 @@
         android:textStyle="bold"
         app:cornerRadius="0dp"
         app:layout_constraintStart_toStartOf="@+id/spinner_language"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_language"
         app:layout_constraintTop_toBottomOf="@+id/spinner_language" />
 
     <Button
         android:id="@+id/button_logout"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="@android:color/holo_orange_dark"
         android:fontFamily="@font/cabin"
@@ -107,13 +218,13 @@
         app:icon="@drawable/ic_logout_black"
         app:iconSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_language" />
 
     <Button
         android:id="@+id/button_delete_account"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="@android:color/holo_red_dark"
         android:fontFamily="@font/cabin"
@@ -125,7 +236,7 @@
         app:icon="@drawable/ic_delete_border_black"
         app:iconSize="25dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_logout" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
