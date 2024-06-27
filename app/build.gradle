@@ -31,6 +31,10 @@ android {
 
 dependencies {
 
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
     // UI elements dependencies
     implementation libs.appcompat
     implementation libs.material
@@ -41,10 +45,6 @@ dependencies {
 
     // Glide is a library that handles images
     implementation libs.glide
-
-    testImplementation libs.junit
-    androidTestImplementation libs.ext.junit
-    androidTestImplementation libs.espresso.core
 
     // Firebase dependencies for remote database and authentication
     implementation libs.firebase.database
