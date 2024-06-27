@@ -7,7 +7,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.github.neptuneluke.gaminghall.model.Game;
+import com.github.neptuneluke.gaminghall.model.Games;
 
 import java.util.List;
 
@@ -15,22 +15,22 @@ import java.util.List;
 public interface Games_Dao {
 
     @Query("SELECT * FROM games")
-    List<Game> getAll();
+    List<Games> getAll();
 
     @Query("SELECT * FROM games WHERE id = :id")
-    Game getGamesById(long id);
+    Games getGamesById(long id);
 
     @Query("SELECT * FROM games WHERE is_favorite = 1")
-    List<Game> getFavoriteGames();
+    List<Games> getFavoriteGames();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    List<Long> insertGames(List<Game> gamesList);
+    List<Long> insertGames(List<Games> gamesList);
 
     @Update
-    int updateFavoriteGames(Game game);
+    int updateFavoriteGames(Games game);
 
     @Update
-    int updateFavoriteGames(List<Game> gamesList);
+    int updateFavoriteGames(List<Games> gamesList);
 
     @Query("DELETE FROM games")
     int deleteAll();

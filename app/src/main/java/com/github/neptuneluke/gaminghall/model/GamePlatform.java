@@ -7,25 +7,26 @@ import androidx.annotation.NonNull;
 
 import java.util.Objects;
 
-public class GamesGenre implements Parcelable {
+public class GamePlatform implements Parcelable {
 
     private String name;
 
-    protected GamesGenre(Parcel in) {
+    protected GamePlatform(Parcel in) {
         name = in.readString();
     }
 
-    public static final Creator<GamesGenre> CREATOR = new Creator<GamesGenre>() {
+    public static final Creator<GamePlatform> CREATOR = new Creator<GamePlatform>() {
         @Override
-        public GamesGenre createFromParcel(Parcel in) {
-            return new GamesGenre(in);
+        public GamePlatform createFromParcel(Parcel in) {
+            return new GamePlatform(in);
         }
 
         @Override
-        public GamesGenre[] newArray(int size) {
-            return new GamesGenre[size];
+        public GamePlatform[] newArray(int size) {
+            return new GamePlatform[size];
         }
     };
+
 
     public String getName() {
         return name;
@@ -39,7 +40,7 @@ public class GamesGenre implements Parcelable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        GamesGenre that = (GamesGenre) o;
+        GamePlatform that = (GamePlatform) o;
         return Objects.equals(name, that.name);
     }
 

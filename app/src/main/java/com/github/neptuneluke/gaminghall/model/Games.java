@@ -10,7 +10,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
-import com.github.neptuneluke.gaminghall.database.GsonConverters;
+import com.github.neptuneluke.gaminghall.database.GsonConverter;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -23,7 +23,7 @@ public class Games implements Parcelable {
     private long id;
 
     @Embedded(prefix = "cover")
-    private GamesCover cover;
+    private GameCover cover;
 
     private long first_release_date;
 
@@ -34,12 +34,12 @@ public class Games implements Parcelable {
     private String name;
 
     @SerializedName("platforms")
-    @TypeConverters(GsonConverters.class)
-    private List<GamesPlatform> platforms;
+    @TypeConverters(GsonConverter.class)
+    private List<GamePlatform> platforms;
 
     @SerializedName("genres")
-    @TypeConverters(GsonConverters.class)
-    private List<GamesGenre> genres;
+    @TypeConverters(GsonConverter.class)
+    private List<GameGenre> genres;
 
     private double rating;
 
@@ -47,9 +47,9 @@ public class Games implements Parcelable {
     private boolean isFavorite;
 
 
-    public Games(long id, GamesCover cover, long first_release_date,
+    public Games(long id, GameCover cover, long first_release_date,
                  String summary, String name,
-                 List<GamesPlatform> platforms, List<GamesGenre> genres,
+                 List<GamePlatform> platforms, List<GameGenre> genres,
                  double rating, boolean isFavorite) {
 
         this.id = id;
@@ -65,12 +65,12 @@ public class Games implements Parcelable {
 
     protected Games(Parcel in) {
         id = in.readLong();
-        cover = in.readParcelable(GamesCover.class.getClassLoader());
+        cover = in.readParcelable(GameCover.class.getClassLoader());
         first_release_date = in.readLong();
         summary = in.readString();
         name = in.readString();
-        platforms = in.createTypedArrayList(GamesPlatform.CREATOR);
-        genres = in.createTypedArrayList(GamesGenre.CREATOR);
+        platforms = in.createTypedArrayList(GamePlatform.CREATOR);
+        genres = in.createTypedArrayList(GameGenre.CREATOR);
         rating = in.readDouble();
         isFavorite = in.readByte() != 0;
     }
@@ -95,19 +95,19 @@ public class Games implements Parcelable {
         this.id = id;
     }
 
-    public GamesCover getCover() {
+    public GameCover getCover() {
         return cover;
     }
 
-    public void setCover(GamesCover cover) {
+    public void setCover(GameCover cover) {
         this.cover = cover;
     }
 
-    public long getFirst_release_date() {
+    public long getFirstReleaseDate() {
         return first_release_date;
     }
 
-    public void setFirst_release_date(long first_release_date) {
+    public void setFirstReleaseDate(long first_release_date) {
         this.first_release_date = first_release_date;
     }
 
@@ -127,11 +127,11 @@ public class Games implements Parcelable {
         this.name = name;
     }
 
-    public List<GamesPlatform> getPlatforms() {
+    public List<GamePlatform> getPlatforms() {
         return platforms;
     }
 
-    public void setPlatforms(List<GamesPlatform> platforms) {
+    public void setPlatforms(List<GamePlatform> platforms) {
         this.platforms = platforms;
     }
 
@@ -143,11 +143,11 @@ public class Games implements Parcelable {
         this.rating = rating;
     }
 
-    public List<GamesGenre> getGenres() {
+    public List<GameGenre> getGenres() {
         return genres;
     }
 
-    public void setGenres(List<GamesGenre> genres) {
+    public void setGenres(List<GameGenre> genres) {
         this.genres = genres;
     }
 
@@ -163,15 +163,15 @@ public class Games implements Parcelable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Games games = (Games) o;
-        return id == games.id
-                && first_release_date == games.first_release_date
-                && Double.compare(rating, games.rating) == 0
-                && Objects.equals(cover, games.cover)
-                && Objects.equals(summary, games.summary)
-                && Objects.equals(name, games.name)
-                && Objects.equals(platforms, games.platforms)
-                && Objects.equals(genres, games.genres);
+        Games game = (Games) o;
+        return id == game.id
+                && first_release_date == game.first_release_date
+                && Double.compare(rating, game.rating) == 0
+                && Objects.equals(cover, game.cover)
+                && Objects.equals(summary, game.summary)
+                && Objects.equals(name, game.name)
+                && Objects.equals(platforms, game.platforms)
+                && Objects.equals(genres, game.genres);
     }
 
     @Override

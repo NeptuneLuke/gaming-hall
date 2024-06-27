@@ -7,27 +7,27 @@ import androidx.annotation.NonNull;
 
 import java.util.Objects;
 
-public class GamesCover implements Parcelable {
+public class GameCover implements Parcelable {
 
     private String url;
 
-    public GamesCover(String url) {
+    public GameCover(String url) {
         this.url = url;
     }
 
-    protected GamesCover(Parcel in) {
+    protected GameCover(Parcel in) {
         url = in.readString();
     }
 
-    public static final Creator<GamesCover> CREATOR = new Creator<GamesCover>() {
+    public static final Creator<GameCover> CREATOR = new Creator<GameCover>() {
         @Override
-        public GamesCover createFromParcel(Parcel in) {
-            return new GamesCover(in);
+        public GameCover createFromParcel(Parcel in) {
+            return new GameCover(in);
         }
 
         @Override
-        public GamesCover[] newArray(int size) {
-            return new GamesCover[size];
+        public GameCover[] newArray(int size) {
+            return new GameCover[size];
         }
     };
 
@@ -43,7 +43,7 @@ public class GamesCover implements Parcelable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        GamesCover that = (GamesCover) o;
+        GameCover that = (GameCover) o;
         return Objects.equals(url, that.url);
     }
 
