@@ -103,11 +103,11 @@ public class Games implements Parcelable {
         this.cover = cover;
     }
 
-    public long getFirstReleaseDate() {
+    public long getFirst_release_date() {
         return first_release_date;
     }
 
-    public void setFirstReleaseDate(long first_release_date) {
+    public void setFirst_release_date(long first_release_date) {
         this.first_release_date = first_release_date;
     }
 
