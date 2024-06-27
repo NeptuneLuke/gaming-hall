@@ -36,6 +36,7 @@ dependencies {
     implementation libs.material
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
+    implementation libs.cardview
     // implementation 'com.google.android.flexbox:flexbox:3.0.0'
 
     // Glide is a library that handles images
