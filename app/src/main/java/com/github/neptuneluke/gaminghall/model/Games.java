@@ -25,7 +25,7 @@ public class Games implements Parcelable {
     @Embedded(prefix = "cover")
     private GameCover cover;
 
-    private long first_release_date;
+    private long firstReleaseDate;
 
     @SerializedName("summary")
     private String summary;
@@ -47,14 +47,14 @@ public class Games implements Parcelable {
     private boolean isFavorite;
 
 
-    public Games(long id, GameCover cover, long first_release_date,
+    public Games(long id, GameCover cover, long firstReleaseDate,
                  String summary, String name,
                  List<GamePlatform> platforms, List<GameGenre> genres,
                  double rating, boolean isFavorite) {
 
         this.id = id;
         this.cover = cover;
-        this.first_release_date = first_release_date;
+        this.firstReleaseDate = firstReleaseDate;
         this.summary = summary;
         this.name = name;
         this.platforms = platforms;
@@ -66,7 +66,7 @@ public class Games implements Parcelable {
     protected Games(Parcel in) {
         id = in.readLong();
         cover = in.readParcelable(GameCover.class.getClassLoader());
-        first_release_date = in.readLong();
+        firstReleaseDate = in.readLong();
         summary = in.readString();
         name = in.readString();
         platforms = in.createTypedArrayList(GamePlatform.CREATOR);
@@ -103,12 +103,12 @@ public class Games implements Parcelable {
         this.cover = cover;
     }
 
-    public long getFirst_release_date() {
-        return first_release_date;
+    public long getFirstReleaseDate() {
+        return firstReleaseDate;
     }
 
-    public void setFirst_release_date(long first_release_date) {
-        this.first_release_date = first_release_date;
+    public void setFirstReleaseDate(long first_release_date) {
+        this.firstReleaseDate = first_release_date;
     }
 
     public String getSummary() {
@@ -165,7 +165,7 @@ public class Games implements Parcelable {
         if (o == null || getClass() != o.getClass()) return false;
         Games game = (Games) o;
         return id == game.id
-                && first_release_date == game.first_release_date
+                && firstReleaseDate == game.firstReleaseDate
                 && Double.compare(rating, game.rating) == 0
                 && Objects.equals(cover, game.cover)
                 && Objects.equals(summary, game.summary)
@@ -176,7 +176,7 @@ public class Games implements Parcelable {
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, cover, first_release_date, summary, name, platforms, genres, rating);
+        return Objects.hash(id, cover, firstReleaseDate, summary, name, platforms, genres, rating);
     }
 
     @Override
@@ -188,7 +188,7 @@ public class Games implements Parcelable {
     public void writeToParcel(@NonNull Parcel dest, int flags) {
         dest.writeLong(id);
         dest.writeParcelable(cover, flags);
-        dest.writeLong(first_release_date);
+        dest.writeLong(firstReleaseDate);
         dest.writeString(summary);
         dest.writeString(name);
         dest.writeTypedList(platforms);
@@ -202,7 +202,7 @@ public class Games implements Parcelable {
         return "Games{" +
                 "id=" + id +
                 ", cover=" + cover +
-                ", first_release_date=" + first_release_date +
+                ", firstReleaseDate=" + firstReleaseDate +
                 ", summary='" + summary + '\'' +
                 ", name='" + name + '\'' +
                 ", platforms=" + platforms +
