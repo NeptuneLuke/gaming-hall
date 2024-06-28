@@ -17,7 +17,7 @@ public class ProfileFragment extends Fragment {
 
     private static final String TAG = ProfileFragment.class.getSimpleName();
 
-    private ImageView image_profile;
+    private ImageView image_profile, image_visibility_password;
     private TextView textview_username, textview_email, textview_password, textview_number_favorite, textview_number_review;
     private Spinner spinner_language;
     private Button button_language, button_logout, button_delete_account;
@@ -54,6 +54,7 @@ public class ProfileFragment extends Fragment {
         textview_username = view.findViewById(R.id.textview_username);
         textview_email = view.findViewById(R.id.textview_email);
         textview_password = view.findViewById(R.id.textview_password);
+        image_visibility_password = view.findViewById(R.id.image_visibility);
         textview_number_favorite = view.findViewById(R.id.textview_number_favorite);
         textview_number_review = view.findViewById(R.id.textview_number_review);
         spinner_language = view.findViewById(R.id.spinner_language);
