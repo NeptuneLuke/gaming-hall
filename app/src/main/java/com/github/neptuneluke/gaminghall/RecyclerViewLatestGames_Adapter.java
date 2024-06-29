@@ -26,14 +26,13 @@ public class RecyclerViewLatestGames_Adapter extends RecyclerView.Adapter<Recycl
     }
 
     static class TestViewHolder extends RecyclerView.ViewHolder {
-        TextView textView;
-        ImageView imageView;
+        TextView textview;
+        ImageView imageview;
 
         TestViewHolder(View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.textview_in_recyclerview_item); // Adjust ID as needed
-            imageView = itemView.findViewById(R.id.imageview_in_recyclerview_item);
-            // imageView.setImageResource(R.drawable.ic_app);
+            textview = itemView.findViewById(R.id.textview_in_recyclerview_item); // Adjust ID as needed
+            imageview = itemView.findViewById(R.id.imageview_in_recyclerview_item);
         }
     }
 
@@ -47,10 +46,9 @@ public class RecyclerViewLatestGames_Adapter extends RecyclerView.Adapter<Recycl
     @Override
     public void onBindViewHolder(@NonNull TestViewHolder holder, int position) {
 
-        holder.textView.setText(text_items.get(position));
-        // holder.imageView.setImageResource(R.drawable.ic_app);
-        holder.imageView.setImageDrawable(image_items.get(position));
-
+        holder.textview.setText(text_items.get(position));
+        // holder.imageView.setImageResource(R.drawable.cover_not_found);
+        holder.imageview.setImageDrawable(image_items.get(position));
     }
 
     @Override
@@ -60,7 +58,7 @@ public class RecyclerViewLatestGames_Adapter extends RecyclerView.Adapter<Recycl
 
     public void addItem(String newItem) {
         text_items.add(newItem);
-        Drawable d = ContextCompat.getDrawable(context, R.drawable.ic_app); //this.context.getResources().getDrawable(R.drawable.ic_app);
+        Drawable d = ContextCompat.getDrawable(context, R.drawable.cover_not_found); //this.context.getResources().getDrawable(R.drawable.cover_not_found);
         image_items.add(d);
         notifyItemInserted(text_items.size() - 1);
     }

@@ -40,7 +40,7 @@
 
     <!-- Home fragment -->
     <string name="latest_release">Latest released</string>
-    <string name="latest_best">Recents most rated</string>
+    <string name="trending">Trending</string>
     <string name="best_rating">Most rated</string>
     <!-- ________________________________________________________ -->
 

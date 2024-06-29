@@ -19,7 +19,7 @@ public class HomeFragment extends Fragment {
     private static final String TAG = HomeFragment.class.getSimpleName();
 
     private NestedScrollView nested_scrollview;
-    private RecyclerView recyclerview_latest_games, recyclerview_latest_best_games;
+    private RecyclerView recyclerview_latest_games, recyclerview_trending_games, recyclerview_best_games;
 
 
     public HomeFragment() {
@@ -49,17 +49,21 @@ public class HomeFragment extends Fragment {
 
         nested_scrollview = view.findViewById(R.id.nested_scrollview);
         recyclerview_latest_games = view.findViewById(R.id.recyclerview_latest_games);
-        recyclerview_latest_best_games = view.findViewById(R.id.recyclerview_latest_best_games);
+        recyclerview_trending_games = view.findViewById(R.id.recyclerview_trending_games);
+        recyclerview_best_games = view.findViewById(R.id.recyclerview_best_games);
 
         recyclerview_latest_games.setNestedScrollingEnabled(false);
-        recyclerview_latest_best_games.setNestedScrollingEnabled(false);
+        recyclerview_trending_games.setNestedScrollingEnabled(false);
+        recyclerview_best_games.setNestedScrollingEnabled(false);
 
         RecyclerViewLatestGames_Adapter adapter = new RecyclerViewLatestGames_Adapter(this.getContext());
 
         recyclerview_latest_games.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.HORIZONTAL, false));
         recyclerview_latest_games.setAdapter(adapter);
-        recyclerview_latest_best_games.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.HORIZONTAL, false));
-        recyclerview_latest_best_games.setAdapter(adapter);
+        recyclerview_trending_games.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerview_trending_games.setAdapter(adapter);
+        recyclerview_best_games.setLayoutManager(new LinearLayoutManager(this.getContext(), LinearLayoutManager.HORIZONTAL, false));
+        recyclerview_best_games.setAdapter(adapter);
 
         adapter.addItem("1");
         adapter.addItem("2");
