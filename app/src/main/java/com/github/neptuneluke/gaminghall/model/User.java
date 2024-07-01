@@ -9,12 +9,12 @@ public class User implements Parcelable {
 
     private String name;
     private String email;
-    private String idToken;
+    private String googleToken;
 
-    public User(String name, String email, String idToken) {
+    public User(String name, String email, String googleToken) {
         this.name = name;
         this.email = email;
-        this.idToken = idToken;
+        this.googleToken = googleToken;
     }
 
     public String getName() {
@@ -34,12 +34,12 @@ public class User implements Parcelable {
     }
 
     @Exclude
-    public String getIdToken() {
-        return idToken;
+    public String getGoogleToken() {
+        return googleToken;
     }
 
-    public void setIdToken(String idToken) {
-        this.idToken = idToken;
+    public void setGoogleToken(String googleToken) {
+        this.googleToken = googleToken;
     }
 
     @Override
@@ -47,7 +47,7 @@ public class User implements Parcelable {
         return "User{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", idToken='" + idToken + '\'' +
+                ", googleToken='" + googleToken + '\'' +
                 '}';
     }
 
@@ -60,19 +60,19 @@ public class User implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.name);
         dest.writeString(this.email);
-        dest.writeString(this.idToken);
+        dest.writeString(this.googleToken);
     }
 
     public void readFromParcel(Parcel source) {
         this.name = source.readString();
         this.email = source.readString();
-        this.idToken = source.readString();
+        this.googleToken = source.readString();
     }
 
     protected User(Parcel in) {
         this.name = in.readString();
         this.email = in.readString();
-        this.idToken = in.readString();
+        this.googleToken = in.readString();
     }
 
     public static final Creator<User> CREATOR = new Creator<User>() {

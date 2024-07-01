@@ -1,5 +1,7 @@
 package com.github.neptuneluke.gaminghall;
 
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +13,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 public class ProfileFragment extends Fragment {
@@ -52,14 +55,41 @@ public class ProfileFragment extends Fragment {
 
         image_profile = view.findViewById(R.id.image_profile);
         textview_username = view.findViewById(R.id.textview_username);
+
+        textview_number_favorite = view.findViewById(R.id.textview_number_favorite);
+        textview_number_review = view.findViewById(R.id.textview_number_review);
+
         textview_email = view.findViewById(R.id.textview_email);
         textview_password = view.findViewById(R.id.textview_password);
         image_visibility_password = view.findViewById(R.id.image_visibility);
-        textview_number_favorite = view.findViewById(R.id.textview_number_favorite);
-        textview_number_review = view.findViewById(R.id.textview_number_review);
+
         spinner_language = view.findViewById(R.id.spinner_language);
         button_language = view.findViewById(R.id.button_language);
         button_logout = view.findViewById(R.id.button_logout);
         button_delete_account = view.findViewById(R.id.button_delete_account);
+
+        String plain_password = textview_password.getText().toString(); // save the plain password
+
+        // set a string of hidden chars
+        int password_length = plain_password.length();
+        String hidden_password = "";
+        for(int i=0; i < password_length; ++i) {
+            hidden_password += "*";
+        }
+        final String final_hidden_password = hidden_password;   // textview text needs to be final
+
+        image_visibility_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(textview_password.getText().toString().equals(final_hidden_password)) {
+                    textview_password.setText(plain_password);
+                    image_visibility_password.setImageResource(R.drawable.ic_visibility_off_gray);
+                }
+                else {
+                    textview_password.setText(final_hidden_password);
+                    image_visibility_password.setImageResource(R.drawable.ic_visibility_on_gray);
+                }
+            }
+        });
     }
 }

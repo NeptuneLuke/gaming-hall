@@ -23,11 +23,19 @@
     <!-- Errors -->
     <string name="error_username_already_taken">Username already taken</string>
     <string name="error_email_already_taken">This email is already linked to an existing account</string>
-    <string name="error_email_not_found">Email not right</string>
+
+    <string name="error_user_collision">User already exists</string>
+    <string name="error_email_not_found">Email does not exists</string>
     <string name="error_password_not_found">Password not right</string>
+    <string name="error_google_account_not_found">Login error using Google</string>
+
     <string name="error_username_invalid">Invalid username</string>
     <string name="error_email_invalid">Invalid email</string>
     <string name="error_password_invalid">Invalid password</string>
+
+    <string name="login_error">Login error</string>">
+    <string name="registration_error">Signup error</string>
+    <string name="unexpected_error">Error</string>
     <!-- ________________________________________________________ -->
 
     <!-- Fragments titles -->

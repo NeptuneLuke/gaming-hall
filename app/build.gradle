@@ -55,6 +55,7 @@ dependencies {
 
     // Retrofit is a HTTP client that translates HTTP API into a Java interface
     implementation libs.retrofit
+    implementation libs.retrofit.gson
 
     // Room is an Android DBMS
     implementation libs.room.runtime
